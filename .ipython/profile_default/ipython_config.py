@@ -1,1 +1,1 @@
-/home/nbraun/dotfiles/ipython_config.py
+c.TerminalInteractiveShell.editing_mode = 'vi'
