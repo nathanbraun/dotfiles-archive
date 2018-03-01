@@ -1,0 +1,12 @@
+let mapleader = ","
+
+:noremap d <C-d>
+:noremap u <C-u>
+:noremap x :tabclose<CR>
+:noremap j 5j
+:noremap k 5k
+
+set followhints=1
+set editor='/usr/local/bin/gvim -f'
+
+set focuscontent
