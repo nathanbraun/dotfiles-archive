@@ -26,6 +26,8 @@ zstyle ':prezto:*:*' color 'yes'
 zstyle ':prezto:load' pmodule \
   'git' \
   'ruby' \
+  'docker' \
+  'tmux' \
   'environment' \
   'terminal' \
   'editor' \
@@ -148,7 +150,7 @@ zstyle ':prezto:module:prompt' theme 'sorin'
 #
 # Tmux
 #
-
+zstyle ':prezto:module:tmux:auto-start' local 'yes'
 # Auto start a session when Zsh is launched in a local terminal.
 # zstyle ':prezto:module:tmux:auto-start' local 'yes'
 
