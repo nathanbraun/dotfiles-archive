@@ -39,3 +39,6 @@ alias ipython="python -c 'import IPython; IPython.terminal.ipapp.launch_new_inst
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+export PATH=/usr/local/bin:${PATH}
+export PATH="$PATH:$HOME/.rvm/bin"
