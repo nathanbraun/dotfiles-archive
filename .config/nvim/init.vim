@@ -21,9 +21,10 @@ Plug 'easymotion/vim-easymotion'
 Plug 'wellle/targets.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'ervandew/supertab'
-Plug 'radenling/vim-dispatch-neovim'
+" Plug 'radenling/vim-dispatch-neovim'
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-entire'
+Plug 'kshenoy/vim-signature'
 
 "Navigation
 Plug 'francoiscabrol/ranger.vim'
@@ -41,7 +42,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-capslock'
 Plug 'tpope/vim-jdaddy'
 Plug 'tpope/vim-flatfoot'
-Plug 'tpope/vim-dispatch'
+" Plug 'tpope/vim-dispatch'
 
 "Programming plugins -------------------------
 Plug 'pangloss/vim-javascript'
@@ -72,6 +73,7 @@ let g:arpeggio_timeoutlens = {'j':400, 'k':200}
 let mapleader = "\<Space>" 
 let g:ranger_map_keys = 0
 let g:jsx_ext_required = 0
+let g:vimwiki_list = [{'path': '~/vimwiki/'}, {'path': '~/principles'}]
 let g:vimwiki_folding='syntax'
 let g:ack_autoclose=1
 let g:ackprg = 'ag --vimgrep --smart-case'                                                   
@@ -98,6 +100,7 @@ nnoremap <leader>gw :Gwrite<CR><CR>
 nmap <leader>ga <Plug>GitGutterStageHunk
 nmap <leader>gu <Plug>GitGutterUndoHunk
 nmap <leader>gp <Plug>GitGutterPreviewHunk
+nnoremap <silent> <leader>gt :GitGutterSignsToggle<CR>
 nnoremap <leader>gh :pc!<CR>
 nnoremap <leader>gc :Gcommit -v -q %:p<CR>
 nnoremap <leader>ci :Gcommit -q<CR>
