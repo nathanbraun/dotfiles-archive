@@ -55,6 +55,7 @@ Plug 'AndrewRadev/switch.vim'
 Plug 'jpalardy/vim-slime'
 Plug 'hylang/vim-hy'
 Plug 'sirver/ultisnips'
+Plug 'ElmCast/elm-vim'
 
 "Color schemes ------------------------------
 Plug 'junegunn/rainbow_parentheses.vim'
@@ -152,8 +153,8 @@ autocmd FileType css setlocal shiftwidth=2 tabstop=2
 " let g:python3_host_prog = '/usr/bin/python3'
 " let g:python_host_prog = '/usr/bin/python'
 
-let g:python_host_prog = '/home/nbraun/.virtualenvs/neovim2/bin/python'
-let g:python3_host_prog = '/home/nbraun/.virtualenvs/neovim/bin/python'
+let g:python_host_prog = '/Users/nathan/Envs/neovim2/bin/python'
+let g:python3_host_prog = '/Users/nathan/Envs/neovim/bin/python'
 "-------------------------------------------------------------------------------
 " Behavior
 "-------------------------------------------------------------------------------
@@ -219,6 +220,10 @@ let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
 let g:UltiSnipsSnippetsDir = $HOME."/.config/UltiSnips"
 let g:UltiSnipsSnippetDirectories = ['UltiSnips', $HOME.'/.config/UltiSnips']
 let g:UltiSnipsEnableSnipMate = 0
+
+" elm
+let g:elm_setup_keybindings = 0
+" let g:elm_format_autosave = 0
 
 " shortcuts
 nmap <leader>as A [[segmentation]] @workkj0WWW
