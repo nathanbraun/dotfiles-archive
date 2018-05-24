@@ -222,6 +222,9 @@ let g:UltiSnipsEnableSnipMate = 0
 let g:elm_setup_keybindings = 0
 " let g:elm_format_autosave = 0
 
+" vimwiki
+let g:vimwiki_list = [{'path': '~/vimwiki'}, {'path': '~/principles'}]
+
 " shortcuts
 nmap <leader>as A [[segmentation]] @workkj0WWW
 nmap <leader>al A [[large-tract-homes]] @workkj0WWW
