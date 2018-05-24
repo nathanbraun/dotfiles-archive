@@ -184,6 +184,7 @@ let g:slime_target = "tmux"
 call arpeggio#map('i', '', 0, 'jk', '<Esc>')
 
 map <leader>x "*
+nnoremap <silent> <leader>d "=strftime("%Y-%m-%d")<CR>P
 
 " buffer and ctrlp bindings
 "nmap <silent> <leader>b :CtrlPBuffer<CR>
@@ -237,6 +238,6 @@ nmap <silent><leader>pl :e ~/vimwiki/large-tract-homes.wiki<CR>
 nmap <silent><leader>pf :e ~/vimwiki/fraud-fix.wiki<CR>
 nmap <silent><leader>pc :e ~/vimwiki/commercial.wiki<CR>
 nmap <silent><leader>py :e ~/vimwiki/propensity.wiki<CR>
-nmap <silent><leader>pm :e ~/vimwiki/mpac.wiki<CR>
+nmap <silent><leader>pm :e ~/vimwiki/prediction-markets.wiki<CR>
 
 let g:pymode_breakpoint = 0
