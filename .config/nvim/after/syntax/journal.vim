@@ -15,3 +15,9 @@ syntax  match  TodoContext    '\(^\|\W\)@[^[:blank:]]\+'        contains=Vimwiki
 
 hi def link TodoProject       Constant
 hi def link TodoContext      Statement
+hi VimwikiHeader1 guifg=#f94848
+hi VimwikiHeader2 guifg=#ff7f00
+hi VimwikiHeader3 guifg=#ffc200
+hi VimwikiHeader4 guifg=#23b75f
+hi VimwikiHeader5 guifg=#42b0e5
+hi VimwikiHeader6 guifg=#cda8d2
