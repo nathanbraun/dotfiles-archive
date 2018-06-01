@@ -15,7 +15,7 @@ Plug 'tpope/vim-surround'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'mileszs/ack.vim'
+" Plug 'mileszs/ack.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'easymotion/vim-easymotion'
 Plug 'wellle/targets.vim'
@@ -47,19 +47,27 @@ Plug 'tpope/vim-flatfoot'
 "Programming plugins -------------------------
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'tpope/vim-commentary'
 Plug 'airblade/vim-gitgutter'
 Plug 'python-mode/python-mode', {'branch': 'develop'}
 Plug 'AndrewRadev/switch.vim'
 Plug 'jpalardy/vim-slime'
-Plug 'hylang/vim-hy'
-Plug 'sirver/ultisnips'
+" Plug 'hylang/vim-hy'
+" Plug 'sirver/ultisnips'
 Plug 'ElmCast/elm-vim'
 
 "Color schemes ------------------------------
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'flazz/vim-colorschemes'
+" Plug 'felixhummel/setcolors.vim'
+" Plug 'nanotech/jellybeans.vim'
+" Plug 'junegunn/seoul256.vim'
+" Plug 'joshdick/onedark.vim'
+" Plug 'rakr/vim-one'
+" Plug 'KeitaNakamura/neodark.vim'
+" Plug 'ayu-theme/ayu-vim'
+" Plug 'aradunovic/perun.vim'
 
 "Syntax ------------------------------
 Plug 'junegunn/vim-journal'
@@ -74,11 +82,11 @@ let g:arpeggio_timeoutlens = {'j':400, 'k':200}
 let mapleader = "\<Space>" 
 let g:ranger_map_keys = 0
 let g:jsx_ext_required = 0
-let g:vimwiki_list = [{'path': '~/vimwiki/'}, {'path': '~/principles'}]
+let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown'}, {'path': '~/principles'}]
 let g:vimwiki_folding='syntax'
 let g:ack_autoclose=1
 let g:ackprg = 'ag --vimgrep --smart-case'                                                   
-let g:deoplete#enable_at_startup = 1
+" let g:deoplete#enable_at_startup = 1
 
 let g:multi_cursor_exit_from_insert_mode = 0
 
@@ -131,6 +139,7 @@ nmap ga <Plug>(EasyAlign)
 set number
 set colorcolumn=81
 
+set termguicolors
 colorscheme jellybeans
 
 "-------------------------------------------------------------------------------
@@ -149,12 +158,16 @@ set ignorecase
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 autocmd FileType css setlocal shiftwidth=2 tabstop=2
+autocmd FileType journal setlocal shiftwidth=2 tabstop=2
+autocmd FileType vimwiki setlocal shiftwidth=2 tabstop=2
 
 " let g:python3_host_prog = '/usr/bin/python3'
 " let g:python_host_prog = '/usr/bin/python'
 
+" let g:python_host_prog = '/home/nbraun/.virtualenvs/neovim2/bin/python'
 let g:python_host_prog = '/Users/nathan/Envs/neovim2/bin/python'
 let g:python3_host_prog = '/Users/nathan/Envs/neovim/bin/python'
+
 "-------------------------------------------------------------------------------
 " Behavior
 "-------------------------------------------------------------------------------
@@ -241,3 +254,5 @@ nmap <silent><leader>py :e ~/vimwiki/propensity.wiki<CR>
 nmap <silent><leader>pm :e ~/vimwiki/prediction-markets.wiki<CR>
 
 let g:pymode_breakpoint = 0
+
+noremap <leader>j :filetype detect<CR>
