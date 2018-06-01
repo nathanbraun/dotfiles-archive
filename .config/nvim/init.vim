@@ -15,7 +15,7 @@ Plug 'tpope/vim-surround'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'mileszs/ack.vim'
+" Plug 'mileszs/ack.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'easymotion/vim-easymotion'
 Plug 'wellle/targets.vim'
@@ -53,8 +53,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'python-mode/python-mode', {'branch': 'develop'}
 Plug 'AndrewRadev/switch.vim'
 Plug 'jpalardy/vim-slime'
-Plug 'hylang/vim-hy'
-Plug 'sirver/ultisnips'
+" Plug 'hylang/vim-hy'
+" Plug 'sirver/ultisnips'
 Plug 'ElmCast/elm-vim'
 
 "Color schemes ------------------------------
@@ -62,12 +62,12 @@ Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'flazz/vim-colorschemes'
 " Plug 'felixhummel/setcolors.vim'
 " Plug 'nanotech/jellybeans.vim'
-Plug 'junegunn/seoul256.vim'
-Plug 'joshdick/onedark.vim'
-Plug 'rakr/vim-one'
-Plug 'KeitaNakamura/neodark.vim'
-Plug 'ayu-theme/ayu-vim'
-Plug 'aradunovic/perun.vim'
+" Plug 'junegunn/seoul256.vim'
+" Plug 'joshdick/onedark.vim'
+" Plug 'rakr/vim-one'
+" Plug 'KeitaNakamura/neodark.vim'
+" Plug 'ayu-theme/ayu-vim'
+" Plug 'aradunovic/perun.vim'
 
 "Syntax ------------------------------
 Plug 'junegunn/vim-journal'
@@ -164,8 +164,10 @@ autocmd FileType vimwiki setlocal shiftwidth=2 tabstop=2
 " let g:python3_host_prog = '/usr/bin/python3'
 " let g:python_host_prog = '/usr/bin/python'
 
-let g:python_host_prog = '/home/nbraun/.virtualenvs/neovim2/bin/python'
-let g:python3_host_prog = '/home/nbraun/.virtualenvs/neovim/bin/python'
+" let g:python_host_prog = '/home/nbraun/.virtualenvs/neovim2/bin/python'
+let g:python_host_prog = '/Users/nathan/Envs/neovim2/bin/python'
+let g:python3_host_prog = '/Users/nathan/Envs/neovim/bin/python'
+
 "-------------------------------------------------------------------------------
 " Behavior
 "-------------------------------------------------------------------------------
