@@ -12,12 +12,8 @@ Plug 'vimwiki/vimwiki', { 'branch' : 'dev' }
 Plug 'mattn/calendar-vim'
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-surround'
-Plug 'rbgrouleff/bclose.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-" Plug 'mileszs/ack.vim'
-Plug 'junegunn/vim-easy-align'
-Plug 'easymotion/vim-easymotion'
 Plug 'wellle/targets.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'ervandew/supertab'
@@ -25,10 +21,17 @@ Plug 'ervandew/supertab'
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-entire'
 Plug 'kshenoy/vim-signature'
+Plug 'liuchengxu/vim-which-key'
+" On-demand lazy load
+" Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
+Plug 'vim-scripts/YankRing.vim'
+Plug 'tbabej/taskwiki'
+Plug 'blindFS/vim-taskwarrior'
+Plug 'powerman/vim-plugin-AnsiEsc'
+" Plug 'michal-h21/vimwiki-sync'
 
 "Navigation
 Plug 'francoiscabrol/ranger.vim'
-Plug 'rbgrouleff/bclose.vim'
 
 "Appearance plugins ---------------------------------
 Plug 'junegunn/goyo.vim'
@@ -56,6 +59,10 @@ Plug 'jpalardy/vim-slime'
 " Plug 'hylang/vim-hy'
 " Plug 'sirver/ultisnips'
 Plug 'ElmCast/elm-vim'
+Plug 'neovimhaskell/haskell-vim'
+Plug 'alx741/vim-hindent'
+Plug 'kalekundert/vim-coiled-snake'
+Plug 'Konfekt/FastFold'
 
 "Color schemes ------------------------------
 Plug 'junegunn/rainbow_parentheses.vim'
@@ -102,7 +109,7 @@ let g:pymode_rope_complete_on_dot = 0
 
 " vimwiki
 let g:vimwiki_table_mappings = 0
-autocmd BufEnter *.wiki :setlocal filetype=journal
+" autocmd BufEnter *.wiki :setlocal filetype=journal
 
 " git options (fugitive and gitgutter)
 nnoremap <leader>gw :Gwrite<CR><CR>
@@ -173,6 +180,8 @@ let g:python3_host_prog = '/Users/nathan/Envs/neovim/bin/python'
 "-------------------------------------------------------------------------------
 autocmd! bufwritepost init.vim source % " automatically apply changes in init.vim
 
+filetype plugin on
+
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.csv,*.pickle,*.xlsx,*xls,*.docx,*.doc,*.pyc,*.png,*.jgp,*/node_modules/*,*/tmp/*
 set noswapfile
 set nobackup
@@ -216,14 +225,15 @@ noremap <Leader>wp :VimwikiDiaryPrevDay<CR>
 nmap <leader>o :Ranger<CR>
 " for gtd lists
 noremap <silent><Leader>i :e ~/vimwiki/inbox.wiki<CR>
-noremap <silent><Leader>t :e ~/vimwiki/next-actions.wiki<CR>
 noremap <silent><Leader>ph :e ~/vimwiki/projects.wiki<CR>
 noremap <silent><Leader>wr :e ~/vimwiki/reference.wiki<CR>
 noremap <silent><Leader>wo :e ~/vimwiki/waiting-for.wiki<CR>
 noremap <silent><Leader>we :e ~/vimwiki/someday.wiki<CR>
 
-noremap <leader>wj :set filetype=journal<CR>
-noremap <leader>wk :set filetype=vimwiki<CR>
+autocmd FileType journal nnoremap <buffer> <leader>j :set filetype=vimwiki<CR>
+autocmd FileType vimwiki nnoremap <buffer> <leader>j :set filetype=journal<CR>
+" noremap <leader>wj :set filetype=journal<CR>
+" noremap <leader>wk :set filetype=vimwiki<CR>
 
 noremap <leader>y :Goyo<CR>
 
@@ -246,13 +256,14 @@ nmap <leader>af A [[fraud-fix]] @workkj0WWW
 nmap <leader>ac A [[commercial]] @workkj0WWW
 nmap <leader>ay A [[propensity]] @workkj0WWW
 
-nmap <silent><leader>ps :e ~/vimwiki/segmentation.wiki<CR>
 nmap <silent><leader>pl :e ~/vimwiki/large-tract-homes.wiki<CR>
-nmap <silent><leader>pf :e ~/vimwiki/fraud-fix.wiki<CR>
-nmap <silent><leader>pc :e ~/vimwiki/commercial.wiki<CR>
-nmap <silent><leader>py :e ~/vimwiki/propensity.wiki<CR>
-nmap <silent><leader>pm :e ~/vimwiki/prediction-markets.wiki<CR>
+nmap <silent><leader>pf :e ~/vimwiki/fantasymath.wiki<CR>
+nmap <silent><leader>po :e ~/vimwiki/overall.wiki<CR>
+nmap <silent><leader>pw :e ~/vimwiki/work.wiki<CR>
 
 let g:pymode_breakpoint = 0
 
-noremap <leader>j :filetype detect<CR>
+" nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
+let g:task_rc_override = 'rc.defaultheight=0'
+
+let g:taskwiki_markup_syntax='markdown'
