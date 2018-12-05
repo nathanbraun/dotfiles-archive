@@ -12,7 +12,7 @@ Plug 'vimwiki/vimwiki', { 'branch' : 'dev' }
 Plug 'mattn/calendar-vim'
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-surround'
-Plug 'rbgrouleff/bclose.vim'
+" Plug 'rbgrouleff/bclose.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 " Plug 'mileszs/ack.vim'
@@ -102,7 +102,7 @@ let g:pymode_rope_complete_on_dot = 0
 
 " vimwiki
 let g:vimwiki_table_mappings = 0
-autocmd BufEnter *.wiki :setlocal filetype=journal
+autocmd BufEnter, BufRead *.wiki :setlocal filetype=journal
 
 " git options (fugitive and gitgutter)
 nnoremap <leader>gw :Gwrite<CR><CR>
@@ -252,6 +252,7 @@ nmap <silent><leader>pf :e ~/vimwiki/fraud-fix.wiki<CR>
 nmap <silent><leader>pc :e ~/vimwiki/commercial.wiki<CR>
 nmap <silent><leader>py :e ~/vimwiki/propensity.wiki<CR>
 nmap <silent><leader>pm :e ~/vimwiki/prediction-markets.wiki<CR>
+nmap <silent><leader>pf :e ~/vimwiki/fantasymath.wiki<CR>
 
 let g:pymode_breakpoint = 0
 

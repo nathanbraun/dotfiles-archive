@@ -42,3 +42,9 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 export PATH=/usr/local/bin:${PATH}
 export PATH="$PATH:$HOME/.rvm/bin"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/nathan/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/nathan/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/nathan/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/nathan/google-cloud-sdk/completion.zsh.inc'; fi
