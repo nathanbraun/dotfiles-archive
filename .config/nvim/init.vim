@@ -229,6 +229,8 @@ noremap <silent><Leader>ph :e ~/vimwiki/projects.wiki<CR>
 noremap <silent><Leader>wr :e ~/vimwiki/reference.wiki<CR>
 noremap <silent><Leader>wo :e ~/vimwiki/waiting-for.wiki<CR>
 noremap <silent><Leader>we :e ~/vimwiki/someday.wiki<CR>
+noremap <silent><Leader>1 :e ~/vimwiki/corelogic.wiki<CR>
+noremap <silent><Leader>2 :e ~/vimwiki/commercial-prefill.wiki<CR>
 
 autocmd FileType journal nnoremap <buffer> <leader>j :set filetype=vimwiki<CR>
 autocmd FileType vimwiki nnoremap <buffer> <leader>j :set filetype=journal<CR>
