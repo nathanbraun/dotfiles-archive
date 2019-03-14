@@ -15,23 +15,17 @@ Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
-" Plug 'junegunn/vim-easy-align'
-" Plug 'easymotion/vim-easymotion'
 Plug 'wellle/targets.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'ervandew/supertab'
-" Plug 'radenling/vim-dispatch-neovim'
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-entire'
 Plug 'kshenoy/vim-signature'
 Plug 'liuchengxu/vim-which-key'
-" On-demand lazy load
-" Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 Plug 'vim-scripts/YankRing.vim'
 Plug 'tbabej/taskwiki'
 Plug 'blindFS/vim-taskwarrior'
 Plug 'powerman/vim-plugin-AnsiEsc'
-" Plug 'michal-h21/vimwiki-sync'
 
 "Navigation
 Plug 'francoiscabrol/ranger.vim'
@@ -48,14 +42,13 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-capslock'
 Plug 'tpope/vim-jdaddy'
 Plug 'tpope/vim-flatfoot'
-" Plug 'tpope/vim-dispatch'
 
 "Programming plugins -------------------------
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
-" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'tpope/vim-commentary'
 Plug 'airblade/vim-gitgutter'
+Plug 'junegunn/gv.vim'
 Plug 'python-mode/python-mode', {'branch': 'develop'}
 Plug 'AndrewRadev/switch.vim'
 Plug 'jpalardy/vim-slime'
@@ -70,8 +63,6 @@ Plug 'Konfekt/FastFold'
 "Color schemes ------------------------------
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'flazz/vim-colorschemes'
-" Plug 'felixhummel/setcolors.vim'
-" Plug 'nanotech/jellybeans.vim'
 Plug 'junegunn/seoul256.vim'
 Plug 'joshdick/onedark.vim'
 Plug 'rakr/vim-one'
@@ -123,6 +114,7 @@ nnoremap <silent> <leader>gt :GitGutterSignsToggle<CR>
 nnoremap <leader>gh :pc!<CR>
 nnoremap <leader>gc :Gcommit -v -q %:p<CR>
 nnoremap <leader>ci :Gcommit -q<CR>
+nnoremap <leader>ca :Gcommit --amend<CR>
 nnoremap <leader>st :Gstatus<CR>
 nnoremap <leader>gr :Gpush<CR>
 
@@ -217,7 +209,6 @@ nmap <silent> <leader>r :History<CR>
 
 nnoremap <leader>/ :Ack!<Space>
 "nmap <silent> <leader>r :CtrlPMRU<CR>
-noremap <Leader>n :bnext<CR>
 noremap <Leader>v :vsplit<CR>
 
 " vimwiki bindings
@@ -225,13 +216,19 @@ noremap <Leader>wn :VimwikiDiaryNextDay<CR>
 noremap <Leader>wp :VimwikiDiaryPrevDay<CR>
 nmap <leader>o :Ranger<CR>
 " for gtd lists
-noremap <silent><Leader>i :e ~/vimwiki/inbox.wiki<CR>
+noremap <silent><Leader>i :e ~/vimwiki/index.wiki<CR>
+noremap <silent><Leader>p :e ~/vimwiki/pain.wiki<CR>
+noremap <silent><Leader>e :e ~/vimwiki/business-ideas.wiki<CR>
+noremap <silent><Leader>m :e ~/vimwiki/mistakes.wiki<CR>
+noremap <silent><Leader>n :e ~/vimwiki/next-actions.wiki<CR>
 noremap <silent><Leader>ph :e ~/vimwiki/projects.wiki<CR>
 noremap <silent><Leader>wr :e ~/vimwiki/reference.wiki<CR>
 noremap <silent><Leader>wo :e ~/vimwiki/waiting-for.wiki<CR>
 noremap <silent><Leader>we :e ~/vimwiki/someday.wiki<CR>
 noremap <silent><Leader>1 :e ~/vimwiki/corelogic.wiki<CR>
-noremap <silent><Leader>2 :e ~/vimwiki/commercial-prefill.wiki<CR>
+noremap <silent><Leader>2 :e ~/vimwiki/segmentation.wiki<CR>
+noremap <silent><Leader>3 :e ~/vimwiki/fantasymath.wiki<CR>
+noremap <silent><Leader>4 :e ~/vimwiki/fantasybook.wiki<CR>
 
 autocmd FileType journal nnoremap <buffer> <leader>j :set filetype=vimwiki<CR>
 autocmd FileType vimwiki nnoremap <buffer> <leader>j :set filetype=journal<CR>
