@@ -30,10 +30,6 @@ Plug 'powerman/vim-plugin-AnsiEsc'
 "Navigation
 Plug 'francoiscabrol/ranger.vim'
 
-"Appearance plugins ---------------------------------
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
-
 "Tim Pope plugins----------------------------
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-unimpaired'
@@ -215,27 +211,11 @@ noremap <Leader>v :vsplit<CR>
 noremap <Leader>wn :VimwikiDiaryNextDay<CR>
 noremap <Leader>wp :VimwikiDiaryPrevDay<CR>
 nmap <leader>o :Ranger<CR>
-" for gtd lists
-noremap <silent><Leader>i :e ~/vimwiki/index.wiki<CR>
-noremap <silent><Leader>p :e ~/vimwiki/pain.wiki<CR>
-noremap <silent><Leader>e :e ~/vimwiki/business-ideas.wiki<CR>
-noremap <silent><Leader>m :e ~/vimwiki/mistakes.wiki<CR>
-noremap <silent><Leader>n :e ~/vimwiki/next-actions.wiki<CR>
-noremap <silent><Leader>ph :e ~/vimwiki/projects.wiki<CR>
-noremap <silent><Leader>wr :e ~/vimwiki/reference.wiki<CR>
-noremap <silent><Leader>wo :e ~/vimwiki/waiting-for.wiki<CR>
-noremap <silent><Leader>we :e ~/vimwiki/someday.wiki<CR>
-noremap <silent><Leader>1 :e ~/vimwiki/corelogic.wiki<CR>
-noremap <silent><Leader>2 :e ~/vimwiki/segmentation.wiki<CR>
-noremap <silent><Leader>3 :e ~/vimwiki/fantasymath.wiki<CR>
-noremap <silent><Leader>4 :e ~/vimwiki/fantasybook.wiki<CR>
 
 autocmd FileType journal nnoremap <buffer> <leader>j :set filetype=vimwiki<CR>
 autocmd FileType vimwiki nnoremap <buffer> <leader>j :set filetype=journal<CR>
 " noremap <leader>wj :set filetype=journal<CR>
 " noremap <leader>wk :set filetype=vimwiki<CR>
-
-noremap <leader>y :Goyo<CR>
 
 " ultisinps
 let g:UltiSnipsExpandTrigger = "<tab>"
@@ -249,17 +229,6 @@ let g:UltiSnipsEnableSnipMate = 0
 let g:elm_setup_keybindings = 0
 " let g:elm_format_autosave = 0
 
-" shortcuts
-nmap <leader>as A [[segmentation]] @workkj0WWW
-nmap <leader>al A [[large-tract-homes]] @workkj0WWW
-nmap <leader>af A [[fraud-fix]] @workkj0WWW
-nmap <leader>ac A [[commercial]] @workkj0WWW
-nmap <leader>ay A [[propensity]] @workkj0WWW
-
-nmap <silent><leader>pl :e ~/vimwiki/large-tract-homes.wiki<CR>
-nmap <silent><leader>pf :e ~/vimwiki/fantasymath.wiki<CR>
-nmap <silent><leader>po :e ~/vimwiki/overall.wiki<CR>
-nmap <silent><leader>pw :e ~/vimwiki/work.wiki<CR>
 
 let g:pymode_breakpoint = 0
 
@@ -267,3 +236,31 @@ let g:pymode_breakpoint = 0
 let g:task_rc_override = 'rc.defaultheight=0'
 
 let g:taskwiki_markup_syntax='markdown'
+
+"""""""""""
+" shortcuts
+"""""""""""
+" general
+noremap <silent><Leader>i :e ~/vimwiki/index.wiki<CR>
+noremap <silent><Leader>n :e ~/vimwiki/next-actions.wiki<CR>
+noremap <silent><Leader>p :e ~/vimwiki/projects.wiki<CR>
+noremap <silent><Leader>e :e $MYVIMRC<CR>
+
+noremap <silent><Leader>gb :e ~/vimwiki/business-ideas.wiki<CR>
+noremap <silent><Leader>gm :e ~/vimwiki/mistakes.wiki<CR>
+noremap <silent><Leader>gp :e ~/vimwiki/pain.wiki<CR>
+noremap <silent><Leader>gr :e ~/vimwiki/reference.wiki<CR>
+noremap <silent><Leader>gw :e ~/vimwiki/waiting-for.wiki<CR>
+noremap <silent><Leader>gs :e ~/vimwiki/someday.wiki<CR>
+
+""""""""""
+" projects
+""""""""""
+" work
+noremap <silent><leader>pl :e ~/vimwiki/large-tract-homes.wiki<CR>
+noremap <silent><leader>pp :e ~/vimwiki/project-commercial-prefill.wiki<CR>
+noremap <silent><leader>ps :e ~/vimwiki/project-segmentation.wiki<CR>
+
+" personal
+noremap <silent><leader>pf :e ~/vimwiki/project-fantasymath.wiki<CR>
+noremap <silent><leader>pb :e ~/vimwiki/project-fantasybook.wiki<CR>
