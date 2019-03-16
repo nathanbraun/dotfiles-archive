@@ -17,25 +17,17 @@ Plug 'junegunn/fzf.vim'
 Plug 'wellle/targets.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'ervandew/supertab'
-" Plug 'radenling/vim-dispatch-neovim'
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-entire'
 Plug 'kshenoy/vim-signature'
 Plug 'liuchengxu/vim-which-key'
-" On-demand lazy load
-" Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 Plug 'vim-scripts/YankRing.vim'
 Plug 'tbabej/taskwiki'
 Plug 'blindFS/vim-taskwarrior'
 Plug 'powerman/vim-plugin-AnsiEsc'
-" Plug 'michal-h21/vimwiki-sync'
 
 "Navigation
 Plug 'francoiscabrol/ranger.vim'
-
-"Appearance plugins ---------------------------------
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
 
 "Tim Pope plugins----------------------------
 Plug 'tpope/vim-fugitive'
@@ -45,14 +37,13 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-capslock'
 Plug 'tpope/vim-jdaddy'
 Plug 'tpope/vim-flatfoot'
-" Plug 'tpope/vim-dispatch'
 
 "Programming plugins -------------------------
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
-" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'tpope/vim-commentary'
 Plug 'airblade/vim-gitgutter'
+Plug 'junegunn/gv.vim'
 Plug 'python-mode/python-mode', {'branch': 'develop'}
 Plug 'AndrewRadev/switch.vim'
 Plug 'jpalardy/vim-slime'
@@ -67,14 +58,6 @@ Plug 'Konfekt/FastFold'
 "Color schemes ------------------------------
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'flazz/vim-colorschemes'
-" Plug 'felixhummel/setcolors.vim'
-" Plug 'nanotech/jellybeans.vim'
-" Plug 'junegunn/seoul256.vim'
-" Plug 'joshdick/onedark.vim'
-" Plug 'rakr/vim-one'
-" Plug 'KeitaNakamura/neodark.vim'
-" Plug 'ayu-theme/ayu-vim'
-" Plug 'aradunovic/perun.vim'
 
 "Syntax ------------------------------
 Plug 'junegunn/vim-journal'
@@ -120,6 +103,7 @@ nnoremap <silent> <leader>gt :GitGutterSignsToggle<CR>
 nnoremap <leader>gh :pc!<CR>
 nnoremap <leader>gc :Gcommit -v -q %:p<CR>
 nnoremap <leader>ci :Gcommit -q<CR>
+nnoremap <leader>ca :Gcommit --amend<CR>
 nnoremap <leader>st :Gstatus<CR>
 nnoremap <leader>gr :Gpush<CR>
 
@@ -216,28 +200,17 @@ nmap <silent> <leader>r :History<CR>
 
 nnoremap <leader>/ :Ack!<Space>
 "nmap <silent> <leader>r :CtrlPMRU<CR>
-noremap <Leader>n :bnext<CR>
 noremap <Leader>v :vsplit<CR>
 
 " vimwiki bindings
 noremap <Leader>wn :VimwikiDiaryNextDay<CR>
 noremap <Leader>wp :VimwikiDiaryPrevDay<CR>
 nmap <leader>o :Ranger<CR>
-" for gtd lists
-noremap <silent><Leader>i :e ~/vimwiki/inbox.wiki<CR>
-noremap <silent><Leader>ph :e ~/vimwiki/projects.wiki<CR>
-noremap <silent><Leader>wr :e ~/vimwiki/reference.wiki<CR>
-noremap <silent><Leader>wo :e ~/vimwiki/waiting-for.wiki<CR>
-noremap <silent><Leader>we :e ~/vimwiki/someday.wiki<CR>
-noremap <silent><Leader>1 :e ~/vimwiki/corelogic.wiki<CR>
-noremap <silent><Leader>2 :e ~/vimwiki/commercial-prefill.wiki<CR>
 
 autocmd FileType journal nnoremap <buffer> <leader>j :set filetype=vimwiki<CR>
 autocmd FileType vimwiki nnoremap <buffer> <leader>j :set filetype=journal<CR>
 " noremap <leader>wj :set filetype=journal<CR>
 " noremap <leader>wk :set filetype=vimwiki<CR>
-
-noremap <leader>y :Goyo<CR>
 
 " ultisinps
 let g:UltiSnipsExpandTrigger = "<tab>"
@@ -251,17 +224,6 @@ let g:UltiSnipsEnableSnipMate = 0
 let g:elm_setup_keybindings = 0
 " let g:elm_format_autosave = 0
 
-" shortcuts
-nmap <leader>as A [[segmentation]] @workkj0WWW
-nmap <leader>al A [[large-tract-homes]] @workkj0WWW
-nmap <leader>af A [[fraud-fix]] @workkj0WWW
-nmap <leader>ac A [[commercial]] @workkj0WWW
-nmap <leader>ay A [[propensity]] @workkj0WWW
-
-nmap <silent><leader>pl :e ~/vimwiki/large-tract-homes.wiki<CR>
-nmap <silent><leader>pf :e ~/vimwiki/fantasymath.wiki<CR>
-nmap <silent><leader>po :e ~/vimwiki/overall.wiki<CR>
-nmap <silent><leader>pw :e ~/vimwiki/work.wiki<CR>
 
 let g:pymode_breakpoint = 0
 
@@ -269,3 +231,31 @@ let g:pymode_breakpoint = 0
 let g:task_rc_override = 'rc.defaultheight=0'
 
 let g:taskwiki_markup_syntax='markdown'
+
+"""""""""""
+" shortcuts
+"""""""""""
+" general
+noremap <silent><Leader>i :e ~/vimwiki/index.wiki<CR>
+noremap <silent><Leader>n :e ~/vimwiki/next-actions.wiki<CR>
+noremap <silent><Leader>p :e ~/vimwiki/projects.wiki<CR>
+noremap <silent><Leader>e :e $MYVIMRC<CR>
+
+noremap <silent><Leader>gb :e ~/vimwiki/business-ideas.wiki<CR>
+noremap <silent><Leader>gm :e ~/vimwiki/mistakes.wiki<CR>
+noremap <silent><Leader>gp :e ~/vimwiki/pain.wiki<CR>
+noremap <silent><Leader>gr :e ~/vimwiki/reference.wiki<CR>
+noremap <silent><Leader>gw :e ~/vimwiki/waiting-for.wiki<CR>
+noremap <silent><Leader>gs :e ~/vimwiki/someday.wiki<CR>
+
+""""""""""
+" projects
+""""""""""
+" work
+noremap <silent><leader>pl :e ~/vimwiki/large-tract-homes.wiki<CR>
+noremap <silent><leader>pp :e ~/vimwiki/project-commercial-prefill.wiki<CR>
+noremap <silent><leader>ps :e ~/vimwiki/project-segmentation.wiki<CR>
+
+" personal
+noremap <silent><leader>pf :e ~/vimwiki/project-fantasymath.wiki<CR>
+noremap <silent><leader>pb :e ~/vimwiki/project-fantasybook.wiki<CR>
