@@ -161,13 +161,13 @@ autocmd FileType css setlocal shiftwidth=2 tabstop=2
 autocmd FileType journal setlocal shiftwidth=2 tabstop=2
 autocmd FileType vimwiki setlocal shiftwidth=2 tabstop=2
 
-" let g:python3_host_prog = '/usr/bin/python3'
-" let g:python_host_prog = '/usr/bin/python'
-
-" let g:python_host_prog = '/home/nbraun/.virtualenvs/neovim2/bin/python'
-let g:python_host_prog = '/Users/nathan/Envs/neovim2/bin/python'
-let g:python3_host_prog = '/Users/nathan/Envs/neovim/bin/python'
-
+if g:os == "Darwin"
+    let g:python_host_prog = '/Users/nathan/Envs/neovim2/bin/python'
+    let g:python3_host_prog = '/Users/nathan/Envs/neovim/bin/python'
+elseif g:os == "Linux"
+    let g:python_host_prog = '/Users/nathan/Envs/neovim2/bin/python'
+    let g:python3_host_prog = '/Users/nathan/Envs/neovim/bin/python'
+endif
 "-------------------------------------------------------------------------------
 " Behavior
 "-------------------------------------------------------------------------------
