@@ -102,7 +102,7 @@ let g:vimwiki_table_mappings = 0
 " autocmd BufEnter *.wiki :setlocal filetype=journal
 
 " git options (fugitive and gitgutter)
-nnoremap <leader>gw :Gwrite<CR><CR>
+nnoremap <leader>gaa :Gwrite<CR><CR>
 nmap <leader>ga <Plug>GitGutterStageHunk
 nmap <leader>gu <Plug>GitGutterUndoHunk
 nmap <leader>gp <Plug>GitGutterPreviewHunk
@@ -250,7 +250,7 @@ noremap <silent><Leader>gb :e ~/vimwiki/business-ideas.wiki<CR>
 noremap <silent><Leader>gm :e ~/vimwiki/mistakes.wiki<CR>
 noremap <silent><Leader>gp :e ~/vimwiki/pain.wiki<CR>
 noremap <silent><Leader>gr :e ~/vimwiki/reference.wiki<CR>
-noremap <silent><Leader>gw :e ~/vimwiki/waiting-for.wiki<CR>
+noremap <silent><Leader>gw :e ~/vimwiki/waiting.wiki<CR>
 noremap <silent><Leader>gs :e ~/vimwiki/someday.wiki<CR>
 
 """"""""""
