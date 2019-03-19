@@ -165,8 +165,8 @@ if g:os == "Darwin"
     let g:python_host_prog = '/Users/nathan/Envs/neovim2/bin/python'
     let g:python3_host_prog = '/Users/nathan/Envs/neovim/bin/python'
 elseif g:os == "Linux"
-    let g:python_host_prog = '/Users/nathan/Envs/neovim2/bin/python'
-    let g:python3_host_prog = '/Users/nathan/Envs/neovim/bin/python'
+    let g:python_host_prog = '/home/nbraun/.virtualenvs/neovim2/bin/python'
+    let g:python3_host_prog = '/home/nbraun/.virtualenvs/neovim/bin/python'
 endif
 "-------------------------------------------------------------------------------
 " Behavior
