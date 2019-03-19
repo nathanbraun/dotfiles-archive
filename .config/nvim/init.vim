@@ -195,7 +195,7 @@ let g:slime_target = "tmux"
 call arpeggio#map('i', '', 0, 'jk', '<Esc>')
 
 map <leader>x "*
-nnoremap <silent> <leader>d "=strftime("%Y-%m-%d")<CR>P
+nnoremap <silent> <leader>d "=strftime(" %Y-%m-%d")<CR>p
 
 " buffer and ctrlp bindings
 "nmap <silent> <leader>b :CtrlPBuffer<CR>
@@ -246,12 +246,14 @@ noremap <silent><Leader>n :e ~/vimwiki/next-actions.wiki<CR>
 noremap <silent><Leader>p :e ~/vimwiki/projects.wiki<CR>
 noremap <silent><Leader>e :e $MYVIMRC<CR>
 
-noremap <silent><Leader>gb :e ~/vimwiki/business-ideas.wiki<CR>
-noremap <silent><Leader>gm :e ~/vimwiki/mistakes.wiki<CR>
-noremap <silent><Leader>gp :e ~/vimwiki/pain.wiki<CR>
-noremap <silent><Leader>gr :e ~/vimwiki/reference.wiki<CR>
-noremap <silent><Leader>gw :e ~/vimwiki/waiting.wiki<CR>
-noremap <silent><Leader>gs :e ~/vimwiki/someday.wiki<CR>
+noremap <silent><Leader>lb :e ~/vimwiki/business-ideas.wiki<CR>
+noremap <silent><Leader>lm :e ~/vimwiki/mistakes.wiki<CR>
+noremap <silent><Leader>lp :e ~/vimwiki/pain.wiki<CR>
+noremap <silent><Leader>lr :e ~/vimwiki/reference.wiki<CR>
+noremap <silent><Leader>lw :e ~/vimwiki/waiting.wiki<CR>
+noremap <silent><Leader>ls :e ~/vimwiki/someday.wiki<CR>
+noremap <silent><Leader>lt :e ~/vimwiki/triggers.wiki<CR>
+noremap <silent><Leader>lbtr :e ~/vimwiki/books-to-read.wiki<CR>
 
 """"""""""
 " projects
