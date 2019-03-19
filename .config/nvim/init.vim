@@ -14,7 +14,6 @@ Plug 'bling/vim-airline'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'mileszs/ack.vim'
 Plug 'wellle/targets.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'ervandew/supertab'
@@ -48,8 +47,8 @@ Plug 'junegunn/gv.vim'
 Plug 'python-mode/python-mode', {'branch': 'develop'}
 Plug 'AndrewRadev/switch.vim'
 Plug 'jpalardy/vim-slime'
-Plug 'hylang/vim-hy'
-Plug 'sirver/ultisnips'
+" Plug 'hylang/vim-hy'
+" Plug 'sirver/ultisnips'
 Plug 'ElmCast/elm-vim'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'alx741/vim-hindent'
@@ -59,16 +58,19 @@ Plug 'Konfekt/FastFold'
 "Color schemes ------------------------------
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'flazz/vim-colorschemes'
-Plug 'junegunn/seoul256.vim'
-Plug 'joshdick/onedark.vim'
-Plug 'rakr/vim-one'
-Plug 'KeitaNakamura/neodark.vim'
-Plug 'ayu-theme/ayu-vim'
-Plug 'aradunovic/perun.vim'
 
 "Syntax ------------------------------
 Plug 'junegunn/vim-journal'
 call plug#end()
+
+" get operating system
+if !exists("g:os")
+    if has("win64") || has("win32") || has("win16")
+        let g:os = "Windows"
+    else
+        let g:os = substitute(system('uname'), '\n', '', '')
+    endif
+endif
 
 "-------------------------------------------------------------------------------
 " Plugin Options
@@ -159,11 +161,13 @@ autocmd FileType css setlocal shiftwidth=2 tabstop=2
 autocmd FileType journal setlocal shiftwidth=2 tabstop=2
 autocmd FileType vimwiki setlocal shiftwidth=2 tabstop=2
 
-" let g:python3_host_prog = '/usr/bin/python3'
-" let g:python_host_prog = '/usr/bin/python'
-
-let g:python_host_prog = '/home/nbraun/.virtualenvs/neovim2/bin/python'
-let g:python3_host_prog = '/home/nbraun/.virtualenvs/neovim/bin/python'
+if g:os == "Darwin"
+    let g:python_host_prog = '/Users/nathan/Envs/neovim2/bin/python'
+    let g:python3_host_prog = '/Users/nathan/Envs/neovim/bin/python'
+elseif g:os == "Linux"
+    let g:python_host_prog = '/Users/nathan/Envs/neovim2/bin/python'
+    let g:python3_host_prog = '/Users/nathan/Envs/neovim/bin/python'
+endif
 "-------------------------------------------------------------------------------
 " Behavior
 "-------------------------------------------------------------------------------
