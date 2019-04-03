@@ -250,7 +250,8 @@ noremap <silent><Leader>n :e ~/vimwiki/next-actions.wiki<CR>
 noremap <silent><Leader>p :e ~/vimwiki/projects.wiki<CR>
 noremap <silent><Leader>e :e $MYVIMRC<CR>
 
-noremap <silent><Leader>lb :e ~/vimwiki/business-ideas.wiki<CR>
+noremap <silent><Leader>le :e ~/vimwiki/business-ideas.wiki<CR>
+noremap <silent><Leader>lb :e ~/vimwiki/blog-post-ideas.wiki<CR>
 noremap <silent><Leader>lm :e ~/vimwiki/mistakes.wiki<CR>
 noremap <silent><Leader>lp :e ~/vimwiki/pain.wiki<CR>
 noremap <silent><Leader>lr :e ~/vimwiki/reference.wiki<CR>
