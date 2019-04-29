@@ -21,7 +21,7 @@ Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-entire'
 Plug 'kshenoy/vim-signature'
 Plug 'liuchengxu/vim-which-key'
-Plug 'vim-scripts/YankRing.vim'
+" Plug 'vim-scripts/YankRing.vim'
 Plug 'tbabej/taskwiki'
 Plug 'blindFS/vim-taskwarrior'
 Plug 'powerman/vim-plugin-AnsiEsc'
@@ -199,7 +199,7 @@ let g:slime_target = "tmux"
 call arpeggio#map('i', '', 0, 'jk', '<Esc>')
 
 map <leader>x "*
-nnoremap <silent> <leader>d "=strftime(" %Y-%m-%d")<CR>p
+nnoremap <silent> <leader>d "=strftime("%Y-%m-%d")<CR>p
 
 " buffer and ctrlp bindings
 "nmap <silent> <leader>b :CtrlPBuffer<CR>
@@ -259,6 +259,7 @@ noremap <silent><Leader>lw :e ~/vimwiki/waiting.wiki<CR>
 noremap <silent><Leader>ls :e ~/vimwiki/someday.wiki<CR>
 noremap <silent><Leader>lt :e ~/vimwiki/triggers.wiki<CR>
 noremap <silent><Leader>lbtr :e ~/vimwiki/books-to-read.wiki<CR>
+noremap <silent><Leader>lga :e ~/vimwiki/good-albums.wiki<CR>
 
 """"""""""
 " projects
@@ -271,3 +272,4 @@ noremap <silent><leader>ps :e ~/vimwiki/project-segmentation.wiki<CR>
 " personal
 noremap <silent><leader>pf :e ~/vimwiki/project-fantasymath.wiki<CR>
 noremap <silent><leader>pb :e ~/vimwiki/project-fantasybook.wiki<CR>
+noremap <silent><leader>ph :e ~/vimwiki/project-home.wiki<CR>
