@@ -265,9 +265,10 @@ noremap <silent><Leader>lga :e ~/vimwiki/good-albums.wiki<CR>
 " projects
 """"""""""
 " work
-noremap <silent><leader>pl :e ~/vimwiki/large-tract-homes.wiki<CR>
+noremap <silent><leader>pl :e ~/vimwiki/project-large-tract-homes.wiki<CR>
 noremap <silent><leader>pp :e ~/vimwiki/project-commercial-prefill.wiki<CR>
 noremap <silent><leader>ps :e ~/vimwiki/project-segmentation.wiki<CR>
+noremap <silent><leader>pq :e ~/vimwiki/project-propensity-evaluation.wiki<CR>
 
 " personal
 noremap <silent><leader>pf :e ~/vimwiki/project-fantasymath.wiki<CR>
