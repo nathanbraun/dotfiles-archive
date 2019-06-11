@@ -217,6 +217,12 @@ noremap <Leader>wn :VimwikiDiaryNextDay<CR>
 noremap <Leader>wp :VimwikiDiaryPrevDay<CR>
 nmap <leader>o :Ranger<CR>
 
+" taskwiki
+noremap <leader>ttn :TaskWikiMod +na<CR>
+noremap <leader>ttd :TaskWikiMod +deep<CR>
+noremap <leader>ttc :TaskWikiMod +computer<CR>
+noremap <leader>ttg :TaskWikiMod +gmail<CR>
+
 autocmd FileType journal nnoremap <buffer> <leader>j :set filetype=vimwiki<CR>
 autocmd FileType vimwiki nnoremap <buffer> <leader>j :set filetype=journal<CR>
 " noremap <leader>wj :set filetype=journal<CR>
@@ -270,6 +276,8 @@ noremap <silent><leader>pl :e ~/vimwiki/project-large-tract-homes.wiki<CR>
 noremap <silent><leader>pp :e ~/vimwiki/project-commercial-prefill.wiki<CR>
 noremap <silent><leader>ps :e ~/vimwiki/project-segmentation.wiki<CR>
 noremap <silent><leader>pq :e ~/vimwiki/project-propensity-evaluation.wiki<CR>
+noremap <silent><leader>pi :e ~/vimwiki/project-ibuyer.wiki<CR>
+noremap <silent><leader>pc :e ~/vimwiki/project-loansafe-connect.wiki<CR>
 
 " personal
 noremap <silent><leader>pf :e ~/vimwiki/project-fantasymath.wiki<CR>
