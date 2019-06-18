@@ -1,0 +1,21 @@
+sanitize tridactyllocal tridactylsync
+
+" But also support Tridactyl search too.
+bind / fillcmdline find
+bind ? fillcmdline find -?
+bind n findnext 1
+bind N findnext -1
+" Remove search highlighting.
+bind ,<Space> nohlsearch
+" Use sensitive case. Smart case would be nice here, but it doesn't work.
+set findcase smart
+
+autocmd DocStart mail.google.com mode ignore
+
+bind x tabclose
+
+" Handy multiwindow/multitasking binds
+bind gd tabdetach
+bind gD composite tabduplicate | tabdetach
+
+set editorcmd /usr/local/bin/vimr --wait

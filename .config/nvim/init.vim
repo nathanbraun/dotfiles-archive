@@ -219,9 +219,11 @@ nmap <leader>o :Ranger<CR>
 
 " taskwiki
 noremap <leader>ttn :TaskWikiMod +na<CR>
+noremap <leader>tts :TaskWikiMod +ten<CR>
 noremap <leader>ttd :TaskWikiMod +deep<CR>
 noremap <leader>ttc :TaskWikiMod +computer<CR>
 noremap <leader>ttg :TaskWikiMod +gmail<CR>
+noremap <leader>ttp :TaskWikiMod +planning<CR>
 
 autocmd FileType journal nnoremap <buffer> <leader>j :set filetype=vimwiki<CR>
 autocmd FileType vimwiki nnoremap <buffer> <leader>j :set filetype=journal<CR>
@@ -265,6 +267,7 @@ noremap <silent><Leader>lr :e ~/vimwiki/reference.wiki<CR>
 noremap <silent><Leader>lw :e ~/vimwiki/waiting.wiki<CR>
 noremap <silent><Leader>ls :e ~/vimwiki/someday.wiki<CR>
 noremap <silent><Leader>lt :e ~/vimwiki/triggers.wiki<CR>
+noremap <silent><Leader>lk :e ~/vimwiki/kids.wiki<CR>
 noremap <silent><Leader>lbtr :e ~/vimwiki/books-to-read.wiki<CR>
 noremap <silent><Leader>lga :e ~/vimwiki/good-albums.wiki<CR>
 
