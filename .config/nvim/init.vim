@@ -54,6 +54,7 @@ Plug 'neovimhaskell/haskell-vim'
 Plug 'alx741/vim-hindent'
 Plug 'kalekundert/vim-coiled-snake'
 Plug 'Konfekt/FastFold'
+Plug 'psf/black'
 
 "Color schemes ------------------------------
 Plug 'junegunn/rainbow_parentheses.vim'
@@ -224,6 +225,13 @@ noremap <leader>ttd :TaskWikiMod +deep<CR>
 noremap <leader>ttc :TaskWikiMod +computer<CR>
 noremap <leader>ttg :TaskWikiMod +gmail<CR>
 noremap <leader>ttp :TaskWikiMod +planning<CR>
+noremap <leader>ttrb :TaskWikiMod project:info.read.business<CR>
+noremap <leader>ttrp :TaskWikiMod project:info.read.productivity<CR>
+noremap <leader>ttrs :TaskWikiMod project:info.read.science<CR>
+noremap <leader>ttre :TaskWikiMod project:info.read.econ<CR>
+noremap <leader>ttrm :TaskWikiMod project:info.read.misc<CR>
+noremap <leader>ttrc :TaskWikiMod project:info.read.coding<CR>
+noremap <leader>ttrh :TaskWikiMod project:info.read.history<CR>
 
 autocmd FileType journal nnoremap <buffer> <leader>j :set filetype=vimwiki<CR>
 autocmd FileType vimwiki nnoremap <buffer> <leader>j :set filetype=journal<CR>
@@ -268,8 +276,10 @@ noremap <silent><Leader>lw :e ~/vimwiki/waiting.wiki<CR>
 noremap <silent><Leader>ls :e ~/vimwiki/someday.wiki<CR>
 noremap <silent><Leader>lt :e ~/vimwiki/triggers.wiki<CR>
 noremap <silent><Leader>lk :e ~/vimwiki/kids.wiki<CR>
+noremap <silent><Leader>ll :e ~/vimwiki/reading-list.wiki<CR>
 noremap <silent><Leader>lbtr :e ~/vimwiki/books-to-read.wiki<CR>
 noremap <silent><Leader>lga :e ~/vimwiki/good-albums.wiki<CR>
+noremap <silent><Leader>lg :e ~/vimwiki/gifts-to-buy.wiki<CR>
 
 """"""""""
 " projects
@@ -281,8 +291,11 @@ noremap <silent><leader>ps :e ~/vimwiki/project-segmentation.wiki<CR>
 noremap <silent><leader>pq :e ~/vimwiki/project-propensity-evaluation.wiki<CR>
 noremap <silent><leader>pi :e ~/vimwiki/project-ibuyer.wiki<CR>
 noremap <silent><leader>pc :e ~/vimwiki/project-loansafe-connect.wiki<CR>
+noremap <silent><leader>pr :e ~/vimwiki/project-g1-propensity-retrain.wiki<CR>
 
 " personal
 noremap <silent><leader>pf :e ~/vimwiki/project-fantasymath.wiki<CR>
 noremap <silent><leader>pb :e ~/vimwiki/project-fantasybook.wiki<CR>
 noremap <silent><leader>ph :e ~/vimwiki/project-home.wiki<CR>
+
+autocmd BufWritePost reading-list.wiki silent! !~/reading_list_to_html
