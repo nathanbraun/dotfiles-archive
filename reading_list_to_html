@@ -1,0 +1,2 @@
+#!/bin/sh
+exec "$WORKON_HOME/neovim/bin/python" "$HOME/reading_list_to_html.py"
