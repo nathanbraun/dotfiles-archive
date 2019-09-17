@@ -264,17 +264,17 @@ let g:taskwiki_markup_syntax='markdown'
 " general
 noremap <silent><Leader>i :e ~/vimwiki/index.wiki<CR>
 noremap <silent><Leader>n :e ~/vimwiki/next-actions.wiki<CR>
-noremap <silent><Leader>p :e ~/vimwiki/projects.wiki<CR>
+noremap <silent><Leader>p :e ~/vimwiki/pain.wiki<CR>
 noremap <silent><Leader>e :e $MYVIMRC<CR>
 
 noremap <silent><Leader>le :e ~/vimwiki/business-ideas.wiki<CR>
 noremap <silent><Leader>lb :e ~/vimwiki/blog-post-ideas.wiki<CR>
 noremap <silent><Leader>lm :e ~/vimwiki/mistakes.wiki<CR>
-noremap <silent><Leader>lp :e ~/vimwiki/pain.wiki<CR>
+noremap <silent><Leader>lp :e ~/vimwiki/projects.wiki<CR>
 noremap <silent><Leader>lr :e ~/vimwiki/reference.wiki<CR>
 noremap <silent><Leader>lw :e ~/vimwiki/waiting.wiki<CR>
 noremap <silent><Leader>ls :e ~/vimwiki/someday.wiki<CR>
-noremap <silent><Leader>lt :e ~/vimwiki/triggers.wiki<CR>
+noremap <silent><Leader>lwr :e ~/vimwiki/weekly-review.wiki<CR>
 noremap <silent><Leader>lk :e ~/vimwiki/kids.wiki<CR>
 noremap <silent><Leader>ll :e ~/vimwiki/reading-list.wiki<CR>
 noremap <silent><Leader>lbtr :e ~/vimwiki/books-to-read.wiki<CR>
@@ -285,17 +285,17 @@ noremap <silent><Leader>lg :e ~/vimwiki/gifts-to-buy.wiki<CR>
 " projects
 """"""""""
 " work
-noremap <silent><leader>pl :e ~/vimwiki/project-large-tract-homes.wiki<CR>
-noremap <silent><leader>pp :e ~/vimwiki/project-commercial-prefill.wiki<CR>
-noremap <silent><leader>ps :e ~/vimwiki/project-segmentation.wiki<CR>
-noremap <silent><leader>pq :e ~/vimwiki/project-propensity-evaluation.wiki<CR>
-noremap <silent><leader>pi :e ~/vimwiki/project-ibuyer.wiki<CR>
-noremap <silent><leader>pc :e ~/vimwiki/project-loansafe-connect.wiki<CR>
-noremap <silent><leader>pr :e ~/vimwiki/project-g1-propensity-retrain.wiki<CR>
+noremap <silent><leader>lpl :e ~/vimwiki/project-large-tract-homes.wiki<CR>
+noremap <silent><leader>lpp :e ~/vimwiki/project-commercial-prefill.wiki<CR>
+noremap <silent><leader>lps :e ~/vimwiki/project-segmentation.wiki<CR>
+noremap <silent><leader>lpq :e ~/vimwiki/project-propensity-evaluation.wiki<CR>
+noremap <silent><leader>lpi :e ~/vimwiki/project-ibuyer.wiki<CR>
+noremap <silent><leader>lpc :e ~/vimwiki/project-loansafe-connect.wiki<CR>
+noremap <silent><leader>lpr :e ~/vimwiki/project-g1-propensity-retrain.wiki<CR>
 
 " personal
-noremap <silent><leader>pf :e ~/vimwiki/project-fantasymath.wiki<CR>
-noremap <silent><leader>pb :e ~/vimwiki/project-fantasybook.wiki<CR>
-noremap <silent><leader>ph :e ~/vimwiki/project-home.wiki<CR>
+noremap <silent><leader>lpf :e ~/vimwiki/project-fantasymath.wiki<CR>
+noremap <silent><leader>lpb :e ~/vimwiki/project-fantasybook.wiki<CR>
+noremap <silent><leader>lph :e ~/vimwiki/project-home.wiki<CR>
 
 autocmd BufWritePost reading-list.wiki silent! !~/reading_list_to_html
