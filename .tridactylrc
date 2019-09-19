@@ -19,3 +19,6 @@ bind gd tabdetach
 bind gD composite tabduplicate | tabdetach
 
 set editorcmd /usr/local/bin/vimr --wait
+
+quickmark r file:///Users/nbraun/vimwiki/reading_list.html
+quickmark i https://mail.google.com
