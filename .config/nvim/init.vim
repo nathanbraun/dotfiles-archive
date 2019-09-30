@@ -232,6 +232,7 @@ noremap <leader>ttrs :TaskWikiMod project:info.read.science<CR>
 noremap <leader>ttre :TaskWikiMod project:info.read.econ<CR>
 noremap <leader>ttrm :TaskWikiMod project:info.read.misc<CR>
 noremap <leader>ttrc :TaskWikiMod project:info.read.coding<CR>
+noremap <leader>ttrt :TaskWikiMod project:info.read.tech<CR>
 noremap <leader>ttrh :TaskWikiMod project:info.read.history<CR>
 
 autocmd FileType journal nnoremap <buffer> <leader>j :set filetype=vimwiki<CR>
