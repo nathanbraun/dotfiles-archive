@@ -52,5 +52,5 @@ if __name__ == '__main__':
                 body.insert(2*i, p)
                 body.insert(2*i + 1, soup.new_tag('br'))
 
-    with open(path.join(home, 'reading_list.html'), 'w') as outfile:
+    with open(path.join(home, 'vimwiki', 'reading_list.html'), 'w') as outfile:
         outfile.write(soup.prettify())

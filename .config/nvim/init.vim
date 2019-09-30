@@ -225,6 +225,7 @@ noremap <leader>ttd :TaskWikiMod +deep<CR>
 noremap <leader>ttc :TaskWikiMod +computer<CR>
 noremap <leader>ttg :TaskWikiMod +gmail<CR>
 noremap <leader>ttp :TaskWikiMod +planning<CR>
+noremap <leader>ttw :TaskWikiMod +wed<CR>
 noremap <leader>ttrb :TaskWikiMod project:info.read.business<CR>
 noremap <leader>ttrp :TaskWikiMod project:info.read.productivity<CR>
 noremap <leader>ttrs :TaskWikiMod project:info.read.science<CR>
