@@ -48,7 +48,7 @@ Plug 'python-mode/python-mode', {'branch': 'develop'}
 Plug 'AndrewRadev/switch.vim'
 Plug 'jpalardy/vim-slime'
 " Plug 'hylang/vim-hy'
-" Plug 'sirver/ultisnips'
+Plug 'sirver/ultisnips'
 Plug 'ElmCast/elm-vim'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'alx741/vim-hindent'
@@ -247,6 +247,8 @@ let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
 let g:UltiSnipsSnippetsDir = $HOME."/.config/UltiSnips"
 let g:UltiSnipsSnippetDirectories = ['UltiSnips', $HOME.'/.config/UltiSnips']
 let g:UltiSnipsEnableSnipMate = 0
+let g:UltiSnipsExpandTrigger = "<tab>"
+noremap <leader>u :UltiSnipsEdit<CR>
 
 " elm
 let g:elm_setup_keybindings = 0
@@ -283,6 +285,8 @@ noremap <silent><Leader><leader>ki :e ~/vimwiki/kids.wiki<CR>
 noremap <silent><Leader><leader>bo :e ~/vimwiki/books-to-read.wiki<CR>
 noremap <silent><Leader><leader>ga :e ~/vimwiki/good-albums.wiki<CR>
 noremap <silent><Leader><leader>gi :e ~/vimwiki/gifts-to-buy.wiki<CR>
+noremap <silent><Leader><leader>cp :e ~/vimwiki/project-commercial-prefill.wiki<CR>
+noremap <silent><Leader><leader>us :e ~/.config/UltiSnips/all.snippets<CR>
 
 """"""""""
 " projects
