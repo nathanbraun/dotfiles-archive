@@ -25,6 +25,7 @@ Plug 'liuchengxu/vim-which-key'
 Plug 'tbabej/taskwiki'
 Plug 'blindFS/vim-taskwarrior'
 Plug 'powerman/vim-plugin-AnsiEsc'
+Plug 'nathanaelkane/vim-indent-guides'
 
 "Navigation
 Plug 'francoiscabrol/ranger.vim'
@@ -55,6 +56,7 @@ Plug 'alx741/vim-hindent'
 Plug 'kalekundert/vim-coiled-snake'
 Plug 'Konfekt/FastFold'
 Plug 'psf/black'
+Plug 'wakatime/vim-wakatime'
 
 "Color schemes ------------------------------
 Plug 'junegunn/rainbow_parentheses.vim'
@@ -279,7 +281,7 @@ noremap <silent><Leader><leader>bl :e ~/vimwiki/blog-post-ideas.wiki<CR>
 noremap <silent><Leader><leader>pr :e ~/vimwiki/projects.wiki<CR>
 noremap <silent><Leader><leader>ref :e ~/vimwiki/reference.wiki<CR>
 noremap <silent><Leader><leader>wa :e ~/vimwiki/waiting.wiki<CR>
-noremap <silent><Leader><leader>so :e ~/vimwiki/someday.wiki<CR>
+noremap <silent><Leader><leader>sm :e ~/vimwiki/someday.wiki<CR>
 noremap <silent><Leader><leader>wr :e ~/vimwiki/weekly-review.wiki<CR>
 noremap <silent><Leader><leader>ki :e ~/vimwiki/kids.wiki<CR>
 noremap <silent><Leader><leader>bo :e ~/vimwiki/books-to-read.wiki<CR>
