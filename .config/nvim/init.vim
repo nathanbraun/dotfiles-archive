@@ -26,6 +26,9 @@ Plug 'tbabej/taskwiki'
 Plug 'blindFS/vim-taskwarrior'
 Plug 'powerman/vim-plugin-AnsiEsc'
 Plug 'nathanaelkane/vim-indent-guides'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'liuchengxu/vim-which-key'
 
 "Navigation
 Plug 'francoiscabrol/ranger.vim'
@@ -220,6 +223,9 @@ noremap <Leader>wn :VimwikiDiaryNextDay<CR>
 noremap <Leader>wp :VimwikiDiaryPrevDay<CR>
 nmap <leader>o :Ranger<CR>
 
+map <C-o> :NERDTreeToggle<CR>
+let g:NERDTreeShowLineNumbers = 1
+
 " taskwiki
 noremap <leader>ttn :TaskWikiMod +na<CR>
 noremap <leader>tts :TaskWikiMod +ten<CR>
@@ -299,3 +305,5 @@ noremap <silent><leader><leader>fb :e ~/vimwiki/project-fantasybook.wiki<CR>
 noremap <silent><leader><leader>g1 :e ~/vimwiki/project-g1-propensity-retrain.wiki<CR>
 
 autocmd BufWritePost reading-list.wiki silent! !~/reading_list_to_html
+
+nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>

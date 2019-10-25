@@ -1,0 +1,44 @@
+snippet ppd "importing pandas"
+import pandas as pd
+endsnippet
+
+snippet fpd "importing dataframe, series"
+from pandas import DataFrame, Series
+endsnippet
+
+# pandas IO
+snippet rcsv "reading a csv"
+$1 = pd.read_csv('$2.csv'$0)
+endsnippet
+
+snippet rpcsv "reading a csv with path"
+$1 = pd.read_csv(path.join($2, '$3.csv')$0)
+endsnippet
+
+snippet wcsv "writing a csv"
+$1.to_csv('$2.csv', index=False)
+endsnippet
+
+snippet wpcsv "writing a csv with path"
+$1.to_csv(path.join($2, '$3.csv'), index=False)
+endsnippet
+
+snippet rsql
+$1 = pd.read_sql('$2', $3)
+endsnippet
+
+snippet rsql5
+$1 = pd.read_sql(
+	"""
+	SELECT TOP 5 *
+	FROM $2
+	""", $3)
+endsnippet
+
+snippet dfq "query a dataframe"
+$1.query("$2")
+endsnippet
+
+snippet dfloc "loc syntax"
+$1.loc[$1[$2]$3, $4]
+endsnippet
