@@ -274,35 +274,37 @@ let g:taskwiki_markup_syntax='markdown'
 " shortcuts
 """""""""""
 " general
-noremap <silent><Leader><leader>i :e ~/vimwiki/index.wiki<CR>
-noremap <silent><Leader><leader>na :e ~/vimwiki/next-actions.wiki<CR>
-noremap <silent><Leader><leader>rl :e ~/vimwiki/reading-list.wiki<CR>
-noremap <silent><Leader><leader>pa :e ~/vimwiki/pain.wiki<CR>
-noremap <silent><Leader><leader>con :e $MYVIMRC<CR>
-noremap <silent><Leader><leader>to :e ~/vimwiki/thoughts-on.wiki<CR>
-noremap <silent><Leader><leader>dj :e ~/vimwiki/daily-journal.wiki<CR>
+noremap <silent><leader>li :e ~/vimwiki/index.wiki<CR>
+noremap <silent><leader>lna :e ~/vimwiki/next-actions.wiki<CR>
+noremap <silent><leader>lrl :e ~/vimwiki/reading-list.wiki<CR>
+noremap <silent><leader>lpa :e ~/vimwiki/pain.wiki<CR>
+noremap <silent><leader>lcon :e $MYVIMRC<CR>
+noremap <silent><leader>lto :e ~/vimwiki/thoughts-on.wiki<CR>
+noremap <silent><leader>ldj :e ~/vimwiki/daily-journal.wiki<CR>
 
-noremap <silent><Leader><leader>bi :e ~/vimwiki/business-ideas.wiki<CR>
-noremap <silent><Leader><leader>bl :e ~/vimwiki/blog-post-ideas.wiki<CR>
-noremap <silent><Leader><leader>pr :e ~/vimwiki/projects.wiki<CR>
-noremap <silent><Leader><leader>ref :e ~/vimwiki/reference.wiki<CR>
-noremap <silent><Leader><leader>wa :e ~/vimwiki/waiting.wiki<CR>
-noremap <silent><Leader><leader>sm :e ~/vimwiki/someday.wiki<CR>
-noremap <silent><Leader><leader>wr :e ~/vimwiki/weekly-review.wiki<CR>
-noremap <silent><Leader><leader>ki :e ~/vimwiki/kids.wiki<CR>
-noremap <silent><Leader><leader>bo :e ~/vimwiki/books-to-read.wiki<CR>
-noremap <silent><Leader><leader>ga :e ~/vimwiki/good-albums.wiki<CR>
-noremap <silent><Leader><leader>gi :e ~/vimwiki/gifts-to-buy.wiki<CR>
-noremap <silent><Leader><leader>cp :e ~/vimwiki/project-commercial-prefill.wiki<CR>
-noremap <silent><Leader><leader>us :e ~/.config/UltiSnips/all.snippets<CR>
+noremap <silent><leader>lbi :e ~/vimwiki/business-ideas.wiki<CR>
+noremap <silent><leader>lbl :e ~/vimwiki/blog-post-ideas.wiki<CR>
+noremap <silent><leader>lpr :e ~/vimwiki/projects.wiki<CR>
+noremap <silent><leader>lref :e ~/vimwiki/reference.wiki<CR>
+noremap <silent><leader>lwa :e ~/vimwiki/waiting.wiki<CR>
+noremap <silent><leader>lsm :e ~/vimwiki/someday.wiki<CR>
+noremap <silent><leader>lso :e ~/vimwiki/someday.wiki<CR>
+noremap <silent><leader>lwr :e ~/vimwiki/weekly-review.wiki<CR>
+noremap <silent><leader>lki :e ~/vimwiki/kids.wiki<CR>
+noremap <silent><leader>lbo :e ~/vimwiki/books-to-read.wiki<CR>
+noremap <silent><leader>lga :e ~/vimwiki/good-albums.wiki<CR>
+noremap <silent><leader>lgi :e ~/vimwiki/gifts-to-buy.wiki<CR>
+noremap <silent><leader>lcp :e ~/vimwiki/project-commercial-prefill.wiki<CR>
+noremap <silent><leader>ltt :e ~/vimwiki/working-installment-model.wiki<CR>
+noremap <silent><leader>lus :e ~/.config/UltiSnips/all.snippets<CR>
 
 """"""""""
 " projects
 """"""""""
 " personal
-noremap <silent><leader><leader>fm :e ~/vimwiki/project-fantasymath.wiki<CR>
-noremap <silent><leader><leader>fb :e ~/vimwiki/project-fantasybook.wiki<CR>
-noremap <silent><leader><leader>g1 :e ~/vimwiki/project-g1-propensity-retrain.wiki<CR>
+noremap <silent><leader>lfm :e ~/vimwiki/project-fantasymath.wiki<CR>
+noremap <silent><leader>lfb :e ~/vimwiki/project-fantasybook.wiki<CR>
+noremap <silent><leader>lg1 :e ~/vimwiki/project-g1-propensity-retrain.wiki<CR>
 
 autocmd BufWritePost reading-list.wiki silent! !~/reading_list_to_html
 
