@@ -207,6 +207,8 @@ call arpeggio#map('i', '', 0, 'jk', '<Esc>')
 
 map <leader>x "*
 nnoremap <silent> <leader>d "=strftime("%Y-%m-%d")<CR>p
+nnoremap <silent> <leader>wt :e ~/vimwiki/diary/`date -v+1d +\%Y-\%m-\%d`.wiki<CR>
+" date -v+1d +%Y-%m-%d
 
 " buffer and ctrlp bindings
 "nmap <silent> <leader>b :CtrlPBuffer<CR>
