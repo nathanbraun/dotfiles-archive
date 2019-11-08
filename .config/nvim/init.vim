@@ -283,7 +283,6 @@ noremap <silent><leader>lpa :e ~/vimwiki/pain.wiki<CR>
 noremap <silent><leader>lcon :e $MYVIMRC<CR>
 noremap <silent><leader>lto :e ~/vimwiki/thoughts-on.wiki<CR>
 noremap <silent><leader>ldj :e ~/vimwiki/daily-journal.wiki<CR>
-
 noremap <silent><leader>lbi :e ~/vimwiki/business-ideas.wiki<CR>
 noremap <silent><leader>lbl :e ~/vimwiki/blog-post-ideas.wiki<CR>
 noremap <silent><leader>lpr :e ~/vimwiki/projects.wiki<CR>
@@ -296,8 +295,7 @@ noremap <silent><leader>lki :e ~/vimwiki/kids.wiki<CR>
 noremap <silent><leader>lbo :e ~/vimwiki/books-to-read.wiki<CR>
 noremap <silent><leader>lga :e ~/vimwiki/good-albums.wiki<CR>
 noremap <silent><leader>lgi :e ~/vimwiki/gifts-to-buy.wiki<CR>
-noremap <silent><leader>lcp :e ~/vimwiki/project-commercial-prefill.wiki<CR>
-noremap <silent><leader>ltt :e ~/vimwiki/working-installment-model.wiki<CR>
+noremap <silent><leader>lan :e ~/vimwiki/anki.wiki<CR>
 noremap <silent><leader>lus :e ~/.config/UltiSnips/all.snippets<CR>
 
 """"""""""
@@ -307,6 +305,9 @@ noremap <silent><leader>lus :e ~/.config/UltiSnips/all.snippets<CR>
 noremap <silent><leader>lfm :e ~/vimwiki/project-fantasymath.wiki<CR>
 noremap <silent><leader>lfb :e ~/vimwiki/project-fantasybook.wiki<CR>
 noremap <silent><leader>lg1 :e ~/vimwiki/project-g1-propensity-retrain.wiki<CR>
+noremap <silent><leader>lcp :e ~/vimwiki/project-commercial-prefill.wiki<CR>
+noremap <silent><leader>ltt :e ~/vimwiki/working-installment-model.wiki<CR>
+noremap <silent><leader>lpm :e ~/vimwiki/prediction-markets.wiki<CR>
 
 autocmd BufWritePost reading-list.wiki silent! !~/reading_list_to_html
 
