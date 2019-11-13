@@ -207,7 +207,6 @@ call arpeggio#map('i', '', 0, 'jk', '<Esc>')
 
 map <leader>x "*
 nnoremap <silent> <leader>d "=strftime("%Y-%m-%d")<CR>p
-nnoremap <silent> <leader>wt :e ~/vimwiki/diary/`date -v+1d +\%Y-\%m-\%d`.wiki<CR>
 " date -v+1d +%Y-%m-%d
 
 " buffer and ctrlp bindings
@@ -229,7 +228,9 @@ map <C-o> :NERDTreeToggle<CR>
 let g:NERDTreeShowLineNumbers = 1
 
 " taskwiki
-noremap <leader>ttn :TaskWikiMod +na<CR>
+noremap <leader>tna :TaskWikiMod +na<CR>
+noremap <leader>twe :TaskWikiMod +week<CR>
+noremap <leader>tday :TaskWikiMod +day<CR>
 noremap <leader>tts :TaskWikiMod +ten<CR>
 noremap <leader>ttd :TaskWikiMod +deep<CR>
 noremap <leader>ttc :TaskWikiMod +computer<CR>
