@@ -227,6 +227,8 @@ nmap <leader>o :Ranger<CR>
 map <C-o> :NERDTreeToggle<CR>
 let g:NERDTreeShowLineNumbers = 1
 
+noremap <silent><leader>? :setlocal spell! spelllang=en_us<CR>
+
 " taskwiki
 noremap <leader>tna :TaskWikiMod +na<CR>
 noremap <leader>twe :TaskWikiMod +week<CR>
@@ -281,6 +283,7 @@ noremap <silent><leader>li :e ~/vimwiki/index.wiki<CR>
 noremap <silent><leader>lna :e ~/vimwiki/next-actions.wiki<CR>
 noremap <silent><leader>lrl :e ~/vimwiki/reading-list.wiki<CR>
 noremap <silent><leader>lpa :e ~/vimwiki/pain.wiki<CR>
+noremap <silent><leader>lwe :e ~/vimwiki/week.wiki<CR>
 noremap <silent><leader>lcon :e $MYVIMRC<CR>
 noremap <silent><leader>lto :e ~/vimwiki/thoughts-on.wiki<CR>
 noremap <silent><leader>ldj :e ~/vimwiki/daily-journal.wiki<CR>
@@ -298,6 +301,7 @@ noremap <silent><leader>lga :e ~/vimwiki/good-albums.wiki<CR>
 noremap <silent><leader>lgi :e ~/vimwiki/gifts-to-buy.wiki<CR>
 noremap <silent><leader>lan :e ~/vimwiki/anki.wiki<CR>
 noremap <silent><leader>lus :e ~/.config/UltiSnips/all.snippets<CR>
+noremap <silent><leader>lgo :e ~/vimwiki/goal-be-self-employed.wiki<CR>
 
 """"""""""
 " projects
